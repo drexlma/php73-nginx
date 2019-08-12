@@ -29,6 +29,7 @@ EXPOSE 80
 
 ADD entrypoint.sh /entrypoint.sh
 ADD default /etc/nginx/sites-enabled/default
+RUN ["chmod", "+x", "/entrypoint.sh"]
 
 ENTRYPOINT ["sh", "/entrypoint.sh"]
 
