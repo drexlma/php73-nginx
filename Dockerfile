@@ -1,7 +1,6 @@
 FROM debian:buster-slim
 
 
-LABEL Description="WWW Projekt" Vendor="SPURENELEMENTE GmbH" Version="1.5" maintainer="dd@dbe.academy"
 ENV DEBIAN_FRONTEND noninteractive
 # Locale
 ENV LOCALE en_EN.UTF-8
