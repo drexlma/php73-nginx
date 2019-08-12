@@ -1,16 +1,10 @@
 FROM debian:buster-slim
 
-
 ENV DEBIAN_FRONTEND noninteractive
-# Locale
 ENV LOCALE en_EN.UTF-8
 
 
-RUN apt-get update && apt-get -y upgrade && apt-get -yqq install curl wget vim 
-  
-
-RUN apt-get -y install \
-  php7.3-fpm 		\
+RUN apt-get update && apt-get -y upgrade && apt-get -yqq install curl wget vim php7.3-fpm 		\
   php7.3-curl 		\
   php7.3-bcmath   \
   php7.3-bz2   \
@@ -19,9 +13,8 @@ RUN apt-get -y install \
   php7.3-mysql		\
   php7.3-zip		\
   postfix \
-  nginx
-
-RUN apt-get -y autoremove && \
+  nginx && \
+apt-get -y autoremove && \
  apt-get clean && \
  rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* 
 
@@ -36,7 +29,8 @@ EXPOSE 80
 
 ADD entrypoint.sh /entrypoint.sh
 ADD default /etc/nginx/sites-enabled/default
-ENTRYPOINT ["/entrypoint.sh"]
+
+ENTRYPOINT ["sh", "/entrypoint.sh"]
 
 CMD bash
 
