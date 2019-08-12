@@ -13,6 +13,7 @@ RUN apt-get update && apt-get -y upgrade && apt-get -yqq install curl wget vim p
   php7.3-mysql		\
   php7.3-zip		\
   postfix \
+  cron \ 
   nginx && \
 apt-get -y autoremove && \
  apt-get clean && \
