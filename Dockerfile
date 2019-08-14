@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV LOCALE en_EN.UTF-8
 
 
-RUN apt-get update && apt-get -y upgrade && apt-get -yqq install curl wget vim php7.3-fpm 		\
+RUN apt-get update && apt-get -y upgrade && apt-get -yqq install curl wget vim php7.3-fpm syslog-ng 		\
   php7.3-curl 		\
   php7.3-bcmath   \
   php7.3-bz2   \
