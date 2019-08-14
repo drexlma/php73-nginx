@@ -1,6 +1,8 @@
 #!/bin/sh
 nginx -t 
+service syslog-ng start 
 service nginx start 
+
 service php7.3-fpm start 
 
 service postfix start 
