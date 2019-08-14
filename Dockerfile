@@ -1,7 +1,7 @@
 FROM debian:buster-slim
 
 
-LABEL Description="WWW Projekt" Vendor="Daniel Drexlmaier" Version="1.6" maintainer="Daniel Drexlmaier"
+LABEL Description="WWW Projekt" Vendor="Daniel Drexlmaier" Version="1.7" maintainer="Daniel Drexlmaier"
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV LOCALE en_EN.UTF-8
