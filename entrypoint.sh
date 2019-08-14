@@ -1,5 +1,8 @@
 #!/bin/sh
 nginx -t 
+chmod 0600 /var/spool/cron/crontabs/root
+chown root:crontab /var/spool/cron/crontabs/root
+
 service syslog-ng start 
 service nginx start 
 
